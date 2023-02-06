@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-ijpg8uefzp6=i&_-$-i0tca&aozw=ifbt29-0s8$ys&*(6=ng%
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS=['https://messanger.up.railway.app/'] 
-
+CSRF_TRUSTED_ORIGINS=['https://*.messanger.up.railway.app/'] 
+CSRF_COOKIE_SECURE=False
 
 # Application definition
 
