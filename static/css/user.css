@@ -1,0 +1,40 @@
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    transition: all 0.5s ease-in-out;
+}
+
+h1,
+h3 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: darkslateblue;
+    position: absolute;
+    top: 35%;
+    margin: 10px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.button{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 3px rgba(25, 2, 2, 0.1);
+    margin: 10px;
+    text-decoration: none;
+}
+.ri-user-3-fill{
+    font-size: 25px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

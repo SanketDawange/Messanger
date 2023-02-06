@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" href="{% static 'css/user.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    {% if user.is_authenticated %}
+    <div class="user">
+        
+        <h3><i class="ri-user-3-fill"></i>{{ username }}</h3>
+        {% if request_status == "accepted" %}
+        <a class="button" href="/message">Send Message</a>
+        <a class="button" href="/deletefriend/{{ username }}">Delete friend</a>
+        {% else %}
+        <a class="button" href="/request/{{ username }}">Send Request</a>
+        {% endif %}
+        {% else %}
+        <a class="button" href="/login">Login to see user's profile</a>
+        {% endif %}
+    </div>
+</body>
+<script>
+</script>
+
+</html>

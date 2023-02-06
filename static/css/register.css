@@ -1,0 +1,92 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.warning {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 50%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+input[type="submit"],
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 3px rgba(25, 2, 2, 0.1);
+    margin: 10px;
+}
+
+a {
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.buttons-line {
+    display: flex;
+}
+
+.messages {
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.messages li {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 550px) {
+    .buttons-line{
+        display: flex;
+        flex-direction: column;
+    }
+    .button{
+        text-align: center;
+    }
+}

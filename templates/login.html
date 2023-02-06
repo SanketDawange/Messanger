@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        <form action="login" method="post">
+            {% csrf_token %}
+            <input autocomplete="off" style="margin-top:39px;" type="text" placeholder="Enter your username" name="username" required
+                autofocus>
+            <input type="password" placeholder="Enter your password" name="password" required>
+            <div class="buttons-line">
+                <input type="submit" value="Login">
+                <a class="button" href="register">Don't have an account? </a>
+                <a class="button" href="/">Home</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
